@@ -72,7 +72,23 @@ label {
     margin-right: 15px;
 }
 
-button {
-    height: 20px;
-    width: 20px;
+.start {
+    background-color: #3AA3A0;
+    border: #000000 1px solid;
+    border-radius: 2px;
+    color: inherit;
+}
+
+.alternate {
+    background-color: #FD49A0;
+    border: #000000 1px solid;
+    border-radius: 2px;
+    color: inherit;
+}
+
+.showTime {
+    justify-self: center;
+    margin-top: 15px;
+    color: #D1D0D0;
+    font-size: 1.2rem;
 }
