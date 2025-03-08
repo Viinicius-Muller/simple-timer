@@ -20,11 +20,16 @@
     <main>
         <section >
             <div class="timer-bg">
-                <form action="">
-                    <label for="timer">Timer</label>
-                    <input type="time" name="timer" id="timer" required class="timer-input">
-                </form>
+                <div class="input-bg">
+                    <form action="">
+                        <input type="text" class="minutes" maxlength="2" value="00">
+                        <p class="sep">:</p>
+                        <input type="text" class="seconds" maxlength="2" value="00">
+                    </form>
+                    <button></button>
+                </div>
             </div>
+            <p class="showTime">Timer</p>
         </section>
     </main>
 </body>
