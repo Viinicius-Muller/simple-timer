@@ -34,6 +34,26 @@ header nav {
 }
 
 /* MAIN */
+
+.hidden {
+    display: none;
+}
+
+/* Options NAV */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.options li {
+    padding: 20px;
+    background-color: #0000094f;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Main Timer */
 .timer-bg {
     margin-top: 60px;
     display: grid;
@@ -54,7 +74,7 @@ header nav {
     display: inline;
 }
 
-input {
+.minutes, .seconds {
     display: inline;
     padding: 0px;
     width: 40px;
@@ -64,20 +84,13 @@ input {
     border: none;
 }
 
-
-
-label {
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    margin-right: 15px;
-}
-
 .start {
     background-color: #3AA3A0;
     border: #000000 1px solid;
     border-radius: 2px;
     color: inherit;
 }
+
 
 .alternate {
     background-color: #FD49A0;
@@ -91,4 +104,39 @@ label {
     margin-top: 15px;
     color: #D1D0D0;
     font-size: 1.2rem;
+}
+
+/* Date Hours Timer */
+
+.time-label {
+    font-size: 2.2rem;
+}
+
+.date-bg {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    justify-self: center;
+}
+
+#time {
+    font-size: 2.2rem;
+    color: #ffffff;
+    background-color: #36454F;
+    border: none;
+}
+
+.timer--2 {
+    justify-self: center;
+    margin-top: 15px;
+    color: #D1D0D0;
+    font-size: 1.2rem;
+}
+
+.submit-btton {
+    background-color: #3AA3A0;
+    border: #000000 1px solid;
+    border-radius: 2px;
+    color: inherit;
 }

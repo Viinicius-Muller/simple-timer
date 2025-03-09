@@ -18,7 +18,15 @@
         </nav>
     </header>
     <main>
-        <section >
+        <div>
+            <nav>
+                <ul class="options">
+                    <li id="regular">Regular Timer</li>
+                    <li id="timeBased">Date Time Based</li>
+                </ul>
+            </nav>
+        </div>
+        <section class="timer--regular">
             <div class="timer-bg">
                 <div class="input-bg">
                     <form action="">
@@ -30,7 +38,19 @@
                     <button class="alternate">Stop</button>
                 </div>
             </div>
-            <p class="showTime">Timer</p>
+            <p class="showTime">00:00</p>
+        </section>
+        <section class="timer--date hidden">
+            <div class="date-bg">
+                <div class="input-bg">
+                    <form action="" id="time--form">
+                        <label for="time" class="time-label">Date Time</label>
+                        <input type="time" id="time" name="time" value="00:00">
+                        <input type="submit" value="Start" class="submit-btton">
+                    </form>  
+                </div>
+                <p class="timer--2">00:00</p>
+            </div>
         </section>
     </main>
 </body>
