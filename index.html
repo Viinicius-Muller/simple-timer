@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Timer</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <h2 class="title">Simple Timer</h2>
-            <ul class="header-list">
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Github</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <h2 class="title">Simple Timer</h2>
+        <ul class="header-list">
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Github</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div>
-            <nav>
-                <ul class="options">
-                    <li id="regular">Regular Timer</li>
-                    <li id="timeBased">Date Time Based</li>
-                </ul>
-            </nav>
+      <div>
+        <nav>
+          <ul class="options">
+            <li id="regular">Regular Timer</li>
+            <li id="timeBased">Date Time Based</li>
+          </ul>
+        </nav>
+      </div>
+      <section class="timer--regular">
+        <div class="timer-bg">
+          <div class="input-bg">
+            <form action="">
+              <input type="text" class="minutes" maxlength="2" value="00" />
+              <p class="sep">:</p>
+              <input type="text" class="seconds" maxlength="2" value="00" />
+            </form>
+            <button class="start">Start</button>
+            <button class="stop">Stop</button>
+          </div>
         </div>
-        <section class="timer--regular">
-            <div class="timer-bg">
-                <div class="input-bg">
-                    <form action="">
-                        <input type="text"  class="minutes" maxlength="2" value="00">
-                        <p class="sep">:</p>
-                        <input type="text" class="seconds" maxlength="2" value="00">
-                    </form>
-                    <button class="start">Start</button>
-                    <button class="alternate">Stop</button>
-                </div>
-            </div>
-            <p class="showTime">00:00</p>
-        </section>
-        <section class="timer--date hidden">
-            <div class="date-bg">
-                <div class="input-bg">
-                    <form action="" id="time--form">
-                        <label for="time" class="time-label">Date Time</label>
-                        <input type="time" id="time" name="time" value="00:00">
-                        <input type="submit" value="Start" class="submit-btton">
-                    </form>  
-                </div>
-                <p class="timer--2">00:00</p>
-            </div>
-        </section>
+        <p class="showTime">00:00</p>
+      </section>
+      <section class="timer--date hidden">
+        <div class="date-bg">
+          <div class="input-bg">
+            <form action="" id="time--form">
+              <label for="time" class="time-label">Date Time</label>
+              <input type="time" id="time" name="time" value="00:00" />
+              <input type="submit" value="Start" class="submit-btton" />
+            </form>
+          </div>
+          <p class="timer--2">00:00</p>
+        </div>
+      </section>
     </main>
-</body>
-<script src="./script.js"></script>
+  </body>
+  <script src="./script.js"></script>
 </html>
