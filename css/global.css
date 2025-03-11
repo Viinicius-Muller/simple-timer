@@ -1,0 +1,41 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li a {
+  margin: 0px;
+}
+
+main {
+  min-height: 600px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #222222;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* MAIN */
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 1200px;
+}

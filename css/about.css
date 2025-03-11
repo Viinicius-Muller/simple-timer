@@ -1,0 +1,20 @@
+@import url("./global.css");
+@import url("./components/header.css");
+@import url("./components/footer.css");
+@import url("./components/colors.css");
+
+.about-info {
+  padding: 40px 80px;
+  justify-items: center;
+}
+
+.about-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  text-align: start;
+  max-width: 70ch;
+  font-size: 1.6rem;
+}

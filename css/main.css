@@ -1,48 +1,7 @@
-body,
-h1,
-h2,
-h3,
-p,
-a {
-  margin: 0px;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #343434;
-  color: #ffffff;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-/* HEADER */
-
-.header-list {
-  font-size: 1.5rem;
-  line-height: 1.2;
-  display: flex;
-  gap: 20px;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 120px;
-}
-
-/* MAIN */
-
-.hidden {
-  display: none;
-}
+@import url("./global.css");
+@import url("./components/header.css");
+@import url("./components/footer.css");
+@import url("./components/colors.css");
 
 /* Options NAV */
 .options {
@@ -52,15 +11,15 @@ header nav {
 }
 
 .options li {
-  padding: 20px;
-  background-color: #0000094f;
+  padding: 20px 30px;
+  background-color: #111111;
   border-radius: 4px;
   cursor: pointer;
 }
 
 /* Main Timer */
 .timer-bg {
-  margin-top: 60px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1200px;
@@ -83,8 +42,8 @@ header nav {
 .seconds {
   display: inline;
   padding: 0px;
-  width: 40px;
-  font-size: 2.2rem;
+  width: 70px;
+  font-size: 4rem;
   color: #ffffff;
   background-color: #36454f;
   border: none;
@@ -93,12 +52,14 @@ header nav {
 .start {
   background-color: #3aa3a0;
   border: #000000 1px solid;
+  font-size: 1.6rem;
   border-radius: 2px;
   color: inherit;
 }
 
 .stop {
   background-color: #fd49a0;
+  font-size: 1.6rem;
   border: #000000 1px solid;
   border-radius: 2px;
   color: inherit;
@@ -108,13 +69,15 @@ header nav {
   justify-self: center;
   margin-top: 15px;
   color: #d1d0d0;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 /* Date Hours Timer */
 
 .time-label {
-  font-size: 2.2rem;
+  font-size: 3.4rem;
+  margin-right: 15px;
+  color: #d1d0d0;
 }
 
 .date-bg {
@@ -124,10 +87,10 @@ header nav {
   max-width: 1200px;
   justify-self: center;
 }
-
 #time {
-  font-size: 2.2rem;
+  font-size: 4rem;
   color: #ffffff;
+  color-scheme: dark;
   background-color: #36454f;
   border: none;
 }
@@ -136,12 +99,14 @@ header nav {
   justify-self: center;
   margin-top: 15px;
   color: #d1d0d0;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .submit-btton {
+  margin-left: 15px;
   background-color: #3aa3a0;
   border: #000000 1px solid;
+  font-size: 2rem;
   border-radius: 2px;
   color: inherit;
 }
