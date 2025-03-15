@@ -13,6 +13,10 @@
   margin-bottom: 20px;
 }
 
+.about-info span {
+  color: #fd49a0;
+}
+
 .about-text {
   text-align: start;
   max-width: 70ch;

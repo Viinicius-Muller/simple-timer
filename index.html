@@ -12,8 +12,12 @@
         <h2 class="title"><a href="./index.html">Simple Timer</a></h2>
         <ul class="header-list">
           <li><a href="./about.html">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Github</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://github.com/Viinicius-Muller" target="_blank"
+              >GitHub</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -52,41 +56,63 @@
           <p class="timer--2">00:00</p>
         </div>
       </section>
-      <section class="settings-bg">
-        <div class="settings grid container">
+      <section class="settings-bg container">
+        <div class="settings">
           <h1>Settings</h1>
-          <div></div>
+          <div class="settings-grid">
+            <label for="mute">
+              Mute Alert <input type="checkbox" name="mute" id="mute"
+            /></label>
+            <label for="volume">
+              Alert Volume
+              <input type="range" name="volume" id="volume" value="100"
+            /></label>
+            <div>
+              <button class="change-sound">Change Alert Sound</button>
+              <div class="sounds-list hidden">
+                <div class="sounds-bg active-sfx" id="clockbeepsfx">
+                  <p>Clock Beep</p>
+                </div>
+                <div class="sounds-bg" id="popsfx"><p>Pop</p></div>
+                <div class="sounds-bg" id="metalpipesfx"><p>Metal Pipe</p></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer-bg">
       <div class="footer container">
-        <div class="footer-title"><h1>Simple Timer</h1></div>
+        <div class="title footer-title"><h1>Simple Timer</h1></div>
         <div>
-          <h2>CONTACT</h2>
+          <h2 id="contact">CONTACT</h2>
           <ul class="contact-list">
-            <li>+55 77 9999-8888</li>
-            <li>viniih@gmail.com</li>
+            <li>+55 47 98873-1818</li>
+            <li>zandreviniciusmuller@gmail.com</li>
           </ul>
           <ul class="local-list">
-            <li>Brazil</li>
-            <li>Brasilândia / SC</li>
+            <li>Brasil</li>
+            <li>Brasil / SC</li>
           </ul>
         </div>
         <ul class="social-list">
           <li>
-            <a href=""
-              ><img src="./img/icons/instagram-white-icon.svg" alt=""
+            <a href="https://www.instagram.com/andre.viniih/" target="_blank"
+              ><img src="./img/icons/instagram-white-icon.svg" alt="Instagram"
             /></a>
           </li>
           <li>
-            <a href=""
-              ><img src="./img/icons/github-white-icon.svg" alt=""
+            <a href="https://github.com/Viinicius-Muller" target="_blank"
+              ><img src="./img/icons/github-white-icon.svg" alt="GitHub"
             /></a>
           </li>
           <li>
-            <a href=""
-              ><img src="./img/icons/linkedin-app-white-icon.svg" alt=""
+            <a
+              href="http://linkedin.com/in/andr%C3%A9-vinicius-muller-432b17327/"
+              target="_blank"
+              ><img
+                src="./img/icons/linkedin-app-white-icon.svg"
+                alt="Linkedin"
             /></a>
           </li>
         </ul>

@@ -12,7 +12,6 @@ const stopB = document.querySelector(".stop");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const showTime = document.querySelector(".showTime");
-const pop = new Audio("./pop.mp3");
 
 //  Date Hour Timer
 const timeForm = document.getElementById("time--form");
@@ -24,6 +23,13 @@ const submitButton = document.querySelector(".submit-btton");
 let newTimer;
 let totalSeconds;
 let state = false;
+
+//  Sound Values
+let volume = 1;
+let sfx = new Audio(`./sounds/clockbeepsfx.mp3`);
+sfx.volume = volume;
+
+let mute = false;
 
 class App {
   constructor() {
@@ -103,7 +109,7 @@ class RegularTimer extends App {
       if (totalSeconds === 0) {
         //  Reset config
         this._resetConfig();
-        pop.play();
+        if (!mute) sfx.play();
       }
       showTime.textContent = `${String(Math.trunc(totalSeconds / 60)).padStart(
         2,
@@ -163,7 +169,7 @@ class DateTimer extends App {
       if (totalSeconds === 0) {
         //Reset config
         this._resetConfig();
-        pop.play();
+        if (!mute) sfx.play();
       }
       timer2.textContent = `${String(
         Math.trunc(totalSeconds / 60 / 60)
@@ -178,3 +184,47 @@ class DateTimer extends App {
 const app = new App();
 const regularTimer = new RegularTimer();
 const dateTimer = new DateTimer();
+
+// Settings
+const changeSoundButton = document.querySelector(".change-sound");
+const volumeSlider = document.getElementById("volume");
+const sound_list = document.querySelector(".sounds-list");
+const muteButton = document.getElementById("mute");
+
+const soundsElements = document.querySelectorAll(".sounds-bg");
+
+changeSoundButton.addEventListener("click", function () {
+  sound_list.classList.toggle("hidden");
+});
+
+function muteAlert() {
+  mute = !mute;
+}
+
+function adjustVolume() {
+  //Sets volume values
+  const value = +volumeSlider.value;
+  volume = value / 100;
+  sfx.volume = volume;
+}
+
+function setNewSfx(e) {
+  let obj;
+  if (!e.target.id) {
+    obj = e.target.parentElement;
+  } else obj = e.target;
+  sfx = new Audio(`./sounds/${obj.id}.mp3`);
+  sfx.volume = volume;
+
+  if (document.querySelector(".active-sfx"))
+    document.querySelector(".active-sfx").classList.remove("active-sfx");
+  obj.classList.add("active-sfx");
+}
+
+soundsElements.forEach((el) => {
+  el.addEventListener("click", setNewSfx);
+});
+
+volumeSlider.addEventListener("change", adjustVolume);
+
+muteButton.addEventListener("input", muteAlert);
